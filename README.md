@@ -477,16 +477,11 @@ The final dashboard contains six pages.
 - Open Alerts
 - Closed Alerts
 - Total Alerts
-- Average Resolution Time
-- SLA Breaches
 
 **Main Visuals:**
 
 - Alert queue
 - Alert status cards
-- Alerts over time
-- Backlog summary
-
 ---
 
 ## 🧮 Key DAX Measures
@@ -537,27 +532,6 @@ CALCULATE (
 
 ---
 
-## 🔍 Validation Process
-
-Dashboard results were validated against PostgreSQL queries.
-
-Validation checks included:
-
-- Total transaction count
-- Monthly transaction distribution
-- Risk band distribution
-- Alert count
-- Alerts by reason
-- Merchant-level metrics
-- Wallet-level metrics
-- Date slicer behavior
-- Risk band slicer behavior
-- Visual interaction testing
-
-This ensured that Power BI visuals matched the PostgreSQL reporting layer.
-
----
-
 ## 🎨 Dashboard Design Principles
 
 The dashboard was designed with a dark fintech fraud-ops theme.
@@ -566,7 +540,7 @@ The dashboard was designed with a dark fintech fraud-ops theme.
 
 | Risk Level | Color |
 |---|---|
-| 🟢 Low | Green / Teal |
+| 🟢 Low | Green |
 | 🟡 Medium | Yellow |
 | 🟠 High | Orange |
 | 🔴 Critical | Red |
@@ -599,7 +573,7 @@ Use Merchant Risk, User & Device Risk, and Geospatial Analysis pages to identify
 
 ### ⚙️ Operations Teams
 
-Use alert workload and investigation views to monitor open cases, backlog, and operational priorities.
+Use alert workload and investigation views to monitor open cases, and operational priorities.
 
 ---
 
@@ -614,7 +588,6 @@ This project successfully delivered:
 - ✅ Fraud alert generation logic
 - ✅ Curated BI reporting views
 - ✅ Professional 6-page Power BI dashboard
-- ✅ KPI validation against database queries
 - ✅ Portfolio-ready fraud analytics case study
 
 ---
