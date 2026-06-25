@@ -22,7 +22,7 @@
 
 ## 🚀 Open the Interactive Dashboard
 
-[👉 View the Power BI Dashboard](PASTE_YOUR_POWER_BI_SERVICE_LINK_HERE)
+[👉 View the Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYTA2NzAyNGUtNmEzZC00Mjk2LTkzMTMtZjE1ZjhiMzUwMTdmIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9&pageName=f2c0d7c930d58c3ab998)
 
 ---
 
@@ -58,7 +58,6 @@ Main fraud monitoring areas:
 
 # 📸 Dashboard Screenshots
 
-> Store your screenshots in a folder named `screenshots/` and keep the filenames below for clean GitHub rendering.
 
 Recommended structure:
 
@@ -92,10 +91,6 @@ It is designed for managers and decision-makers who need quick answers without g
 - How many transactions are Critical risk?
 - How is fraud changing over time?
 
-## 📊 Screenshot
-
-![Executive Fraud Overview](screenshots/page_1_executive_overview.png)
-
 ---
 
 # 2️⃣ Fraud Ops Center
@@ -114,10 +109,6 @@ It is focused on alert volume, alert reasons, and high-priority transaction revi
 - What are the most common alert reasons?
 - Which suspicious transactions should analysts review first?
 
-## 📊 Screenshot
-
-![Fraud Ops Center](screenshots/page_2_fraud_ops_center.png)
-
 ---
 
 # 3️⃣ Merchant Risk Analysis
@@ -134,10 +125,6 @@ It helps risk teams review merchants based on transaction volume, flagged activi
 - Which merchants combine high transaction volume with high risk?
 - Which merchant categories show suspicious behavior?
 - Which merchants should be reviewed first?
-
-## 📊 Screenshot
-
-![Merchant Risk Analysis](screenshots/page_3_merchant_risk.png)
 
 ---
 
@@ -156,9 +143,6 @@ It supports investigation of wallets with high fraud scores, abnormal receiver b
 - Which wallets use many devices?
 - Which devices may be connected to suspicious wallet rings?
 
-## 📊 Screenshot
-
-![User and Device Risk](screenshots/page_4_user_device_risk.png)
 
 ---
 
@@ -177,9 +161,6 @@ It helps fraud and risk teams identify governorates or regions with high flagged
 - Are fraud patterns geographically clustered?
 - Which areas should receive closer monitoring?
 
-## 📊 Screenshot
-
-![Geospatial Fraud Analysis](screenshots/page_5_geospatial_analysis.png)
 
 ---
 
@@ -199,9 +180,6 @@ It provides an investigation queue where analysts can review suspicious transact
 - Which transactions need immediate review?
 - What fraud reason is attached to each alert?
 
-## 📊 Screenshot
-
-![Alert Investigation](screenshots/page_6_alert_investigation.png)
 
 ---
 
@@ -267,83 +245,6 @@ The report includes slicers and filters such as:
 These slicers allow users to move from executive-level monitoring into more detailed investigation.
 
 ---
-
-# 🗄️ Data Source Summary
-
-The Power BI report uses curated PostgreSQL BI views rather than raw transaction tables.
-
-Main BI views:
-
-```text
-bi.fact_daily_fraud_kpi
-bi.alert_queue
-bi.high_risk_transactions
-bi.merchant_risk_summary
-bi.user_risk_summary
-bi.risk_band_distribution
-bi.dim_date
-bi.dim_risk_band
-```
-
-This design improves dashboard performance and keeps the Power BI model clean.
-
----
-
-# 🧩 Power BI Model Notes
-
-Important relationships used in the report:
-
-```text
-bi.dim_date[date_key] 1 → * bi.fact_daily_fraud_kpi[date_key]
-
-bi.dim_date[date_key] 1 → * bi.high_risk_transactions[date_key]
-
-bi.dim_date[date_key] 1 → * bi.alert_queue[transaction_date]
-
-bi.dim_risk_band[risk_band] 1 → * bi.high_risk_transactions[risk_band]
-
-bi.dim_risk_band[risk_band] 1 → * bi.alert_queue[risk_band]
-```
-
-Important note:
-
-```text
-Alert visuals use transaction_date for fraud timing analysis, not created_date.
-```
-
----
-
-# 🧪 Validation Summary
-
-Dashboard values were validated against PostgreSQL queries for:
-
-- total transactions
-- total transaction amount
-- flagged transaction count
-- flagged rate
-- alert count
-- alert reasons
-- merchant risk metrics
-- wallet risk metrics
-- risk band distribution
-- date slicer behavior
-- visual interaction behavior
-
-This ensures the Power BI report matches the backend SQL fraud pipeline.
-
----
-
-# 📎 Notes for Viewers
-
-- The dataset is synthetic and generated for portfolio purposes.
-- Raw transaction CSV files are not included because of file size.
-- The dashboard is connected to PostgreSQL reporting views.
-- Screenshots are included so the project can still be reviewed even if the Power BI Service link is unavailable.
-- The Power BI Service link may require permission depending on the sharing settings.
-
----
-
-<div align="center">
 
 ## 🚀 Final Dashboard Statement
 
