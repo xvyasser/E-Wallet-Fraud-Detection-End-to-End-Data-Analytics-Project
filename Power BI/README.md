@@ -240,7 +240,6 @@ The report includes slicers and filters such as:
 - Alert Status
 - Governorate
 - Merchant Category
-- Wallet / Customer attributes
 
 These slicers allow users to move from executive-level monitoring into more detailed investigation.
 
