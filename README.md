@@ -78,8 +78,6 @@ This project solves that by creating a complete fraud analytics workflow from da
 - 🚨 Generate fraud alerts for High and Critical transactions.
 - ⚡ Build optimized BI views for Power BI performance.
 - 📊 Design a professional 6-page Power BI dashboard.
-- 🔍 Validate dashboard metrics against PostgreSQL queries.
-
 ---
 
 ## 🧰 Tools & Technologies
@@ -593,58 +591,6 @@ This project successfully delivered:
 - ✅ Portfolio-ready fraud analytics case study
 
 ---
-
-## 🗂️ Repository Structure
-
-```text
-EWallet_Fraud_Detection_Project/
-│
-├── README.md
-│
-├── data_generation/
-│   └── data_generator.py
-│
-├── sql/
-│   ├── 01_create_schemas.sql
-│   ├── 02_staging_tables.sql
-│   ├── 03_reference_tables.sql
-│   ├── 04_warehouse_tables.sql
-│   ├── 05_load_fact_transactions.sql
-│   ├── 06_fraud_feature_engineering.sql
-│   ├── 07_fraud_scoring.sql
-│   ├── 08_fraud_alerts.sql
-│   └── 09_bi_views.sql
-│
-├── powerbi/
-│   ├── EWallet_Fraud_Detection_Dashboard.pbix
-│   └── ewallet_fraud_detection_powerbi_theme.json
-│
-├── screenshots/
-│   ├── page_1_executive_overview.png
-│   ├── page_2_fraud_ops_center.png
-│   ├── page_3_merchant_risk.png
-│   ├── page_4_user_device_risk.png
-│   ├── page_5_geospatial_analysis.png
-│   └── page_6_alert_investigation.png
-│
-├── presentation/
-│   └── EWallet_Fraud_Detection_Project_Presentation.pptx
-│
-└── docs/
-    └── PROJECT_DOCUMENTATION.md
-```
-
----
-
-## 📎 Notes
-
-The raw generated dataset is not included in this repository due to file size.  
-The repository focuses on the project logic, SQL pipeline, Power BI dashboard, screenshots, and documentation.
-
----
-
-<div align="center">
-
 ## 🚀 Final Result
 
 **A complete fraud analytics solution that transforms raw e-wallet transactions into actionable fraud intelligence.**
