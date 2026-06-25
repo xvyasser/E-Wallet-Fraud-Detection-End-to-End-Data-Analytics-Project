@@ -45,6 +45,33 @@ The final output is a **6-page Power BI dashboard** that helps executives, fraud
 
 ---
 
+## 🤖 Important Transparency Note
+
+The Python scripts in this folder were created with the help of **ChatGPT**.
+
+I did **not manually write the Python generation scripts from scratch**.  
+Instead, ChatGPT was used to help generate the code, structure the logic, and support the data simulation process.
+
+My work focused on:
+
+- defining the project idea
+- explaining the business problem
+- deciding what data entities were needed
+- testing generated outputs
+- loading the data into PostgreSQL
+- building the SQL pipeline
+- validating the final data
+- designing the Power BI dashboard
+- documenting the full project
+
+This note is included for honesty and transparency.
+
+> The Python layer is used as a supporting data-generation layer, while the main learning and project focus is the SQL pipeline, fraud analytics logic, Power BI dashboard, and end-to-end project delivery.
+
+Python was used to create the source data.  
+PostgreSQL and Power BI were used to transform that data into a fraud analytics solution.
+
+---
 ## 🎯 Business Problem
 
 E-wallet platforms process huge transaction volumes every day. Fraud can appear in many forms:
